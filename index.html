@@ -47,7 +47,7 @@
       .loader { position:fixed; inset:0; z-index:9999; background:var(--bg); display:flex; align-items:center; justify-content:center; transition:opacity .7s var(--ease),visibility .7s; }
       .loader.hidden { opacity:0; visibility:hidden; pointer-events:none; }
       .loader-inner { display:flex; flex-direction:column; align-items:center; gap:28px; }
-      .loader-wm { font-size:clamp(1.6rem,5vw,3rem); font-weight:900; letter-spacing:.12em; text-transform:uppercase; background:linear-gradient(90deg,var(--pink),var(--pink3),var(--pink)); background-size:200%; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation:shimmer 2s linear infinite; }
+      .loader-wm { font-size:clamp(1.6rem,5vw,3rem); font-weight:900; letter-spacing:.12em; text-transform:uppercase; color: var(--pink2); background:linear-gradient(90deg,var(--pink),var(--pink3),var(--pink)); background-size:200%; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation:shimmer 2s linear infinite; }
       @keyframes shimmer { to { background-position:200% center; } }
       .loader-bar { width:180px; height:1px; background:rgba(255,255,255,.06); }
       .loader-fill { height:100%; width:0%; background:linear-gradient(90deg,var(--pink),var(--pink3)); animation:loadbar 1.5s var(--ease) forwards; }
@@ -64,7 +64,7 @@
       /* ── NAV ─── */
       .nav { position:fixed; top:0; left:0; right:0; height:var(--nav-h); z-index:800; display:flex; align-items:center; justify-content:space-between; padding:0 clamp(20px,4vw,60px); transition:background .4s,backdrop-filter .4s; }
       .nav.scrolled { background:rgba(13,5,8,.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); }
-      .nav-wm { font-size:.95rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; background:linear-gradient(90deg,var(--pink2),var(--pink3)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+      .nav-wm { font-size:.95rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color: var(--pink2); background:linear-gradient(90deg,var(--pink2),var(--pink3)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
       .nav-links { display:flex; gap:28px; align-items:center; }
       .nav-links a { font-size:.78rem; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--text-dim); transition:color .2s; }
       .nav-links a:hover { color:var(--white); }
@@ -114,6 +114,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        color: var(--pink2);
       }
       .hero-tag  { font-size:clamp(.85rem,1.8vw,1rem); color:var(--text-dim); letter-spacing:.05em; margin-bottom:36px; font-family:var(--tight); }
       .hero-cta  { display:flex; gap:14px; flex-wrap:wrap; }
@@ -334,7 +335,7 @@
 
       <div class="hero-cnt">
         <div class="badge"><div class="pulse"></div>GOD MADE ART — 16 Tracks — Out Now</div>
-        <p class="hero-pre rv-up">Lakeland, FL · Christian Artist · Soul-Stirring Music</p>
+        <p class="hero-pre rv-up">Lakeland, FL · Christian Artist</p>
         <h1 class="hero-title">VENNISAY</h1>
         <p class="hero-tag rv-up">Faith · Music · Purpose — New Album Out Now</p>
         <div class="hero-cta rv-up">
@@ -380,7 +381,7 @@
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
                 Stream Now
               </a>
-              <a href="https://music.apple.com/us/artist/vennisay/1573046468" target="_blank" rel="noopener" class="btn btn-ghost">Apple Music</a>
+              <a href="https://music.apple.com/us/artist/vennisay/1476883119" target="_blank" rel="noopener" class="btn btn-ghost">Apple Music</a>
             </div>
           </div>
         </div>
@@ -452,25 +453,25 @@
       <div class="song-grid">
         <div class="rv-left">
           <div class="cover-wrap">
-            <img src="cover.jpg" alt="isolation" loading="lazy" decoding="async"
-                 onerror="this.src='https://i.scdn.co/image/ab67616d0000b273d4449fb1cb4ba2fca4a0f0f7';this.onerror=null" />
-            <div class="cover-ph" style="display:none"><div class="cover-ph-icon">🎵</div><span>isolation</span></div>
+            <img src="cover.jpg" alt="vulnerable" loading="lazy" decoding="async"
+                 onerror="this.src='https://i.scdn.co/image/ab67616d0000b27371f89647c9b7538b3ee73063';this.onerror=null" />
+            <div class="cover-ph" style="display:none"><div class="cover-ph-icon">🎵</div><span>vulnerable</span></div>
           </div>
           <div class="cover-glow"></div>
         </div>
 
         <div class="rv-right">
-          <h2 class="sec-lbl rv-up" data-n="01.">Featured Track</h2>
-          <h2 class="song-title rv-up"><span class="ac">isol</span>ation</h2>
-          <p class="song-sub rv-up">Vennisay · 127K Streams · Stream Now</p>
+          <h2 class="sec-lbl rv-up" data-n="01.">Latest Single</h2>
+          <h2 class="song-title rv-up"><span class="ac">vulner</span>able</h2>
+          <p class="song-sub rv-up">Vennisay · April 24, 2026 · Newest Single</p>
 
           <div class="dsp-grid rv-up">
-            <a href="https://open.spotify.com/track/5ezUOmiRpQUO1XoGdSX9WP" target="_blank" rel="noopener" class="dsp dsp-sp">
+            <a href="https://open.spotify.com/track/3uO1HQMSVbqNyUv8uiL1Rp" target="_blank" rel="noopener" class="dsp dsp-sp">
               <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
               Spotify
             </a>
-            <a href="https://music.apple.com/us/artist/vennisay/1573046468" target="_blank" rel="noopener" class="dsp dsp-ap">
-              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043H5.986c-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98C23.986 15.668 24 15.259 24 12c0-3.259-.014-3.667-.072-4.947z"/></svg>
+            <a href="https://music.apple.com/us/artist/vennisay/1476883119" target="_blank" rel="noopener" class="dsp dsp-ap">
+              <svg viewBox="0 0 361 361" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M254.5,55c-0.87,0.08-8.6,1.45-9.53,1.64l-107,21.59l-0.04,0.01c-2.79,0.59-4.98,1.58-6.67,3c-2.04,1.71-3.17,4.13-3.6,6.95c-0.09,0.6-0.24,1.82-0.24,3.62c0,0,0,109.32,0,133.92c0,3.13-0.25,6.17-2.37,8.76c-2.12,2.59-4.74,3.37-7.81,3.99c-2.33,0.47-4.66,0.94-6.99,1.41c-8.84,1.78-14.59,2.99-19.8,5.01c-4.98,1.93-8.71,4.39-11.68,7.51c-5.89,6.17-8.28,14.54-7.46,22.38c0.7,6.69,3.71,13.09,8.88,17.82c3.49,3.2,7.85,5.63,12.99,6.66c5.33,1.07,11.01,0.7,19.31-0.98c4.42-0.89,8.56-2.28,12.5-4.61c3.9-2.3,7.24-5.37,9.85-9.11c2.62-3.75,4.31-7.92,5.24-12.35c0.96-4.57,1.19-8.7,1.19-13.26l0-116.15c0-6.22,1.76-7.86,6.78-9.08c0,0,88.94-17.94,93.09-18.75c5.79-1.11,8.52,0.54,8.52,6.61l0,79.29c0,3.14-0.03,6.32-2.17,8.92c-2.12,2.59-4.74,3.37-7.81,3.99c-2.33,0.47-4.66,0.94-6.99,1.41c-8.84,1.78-14.59,2.99-19.8,5.01c-4.98,1.93-8.71,4.39-11.68,7.51c-5.89,6.17-8.49,14.54-7.67,22.38c0.7,6.69,3.92,13.09,9.09,17.82c3.49,3.2,7.85,5.56,12.99,6.6c5.33,1.07,11.01,0.69,19.31-0.98c4.42-0.89,8.56-2.22,12.5-4.55c3.9-2.3,7.24-5.37,9.85-9.11c2.62-3.75,4.31-7.92,5.24-12.35c0.96-4.57,1-8.7,1-13.26V64.46C263.54,58.3,260.29,54.5,254.5,55z"/></svg>
               Apple Music
             </a>
             <a href="https://music.amazon.com/" target="_blank" rel="noopener" class="dsp dsp-am">
@@ -485,7 +486,7 @@
 
           <div class="rv-up">
             <p class="embed-lbl">Listen now</p>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5ezUOmiRpQUO1XoGdSX9WP?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3uO1HQMSVbqNyUv8uiL1Rp?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
         </div>
       </div>
@@ -503,8 +504,8 @@
             <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
             Spotify
           </a>
-          <a href="https://music.apple.com/us/artist/vennisay/1573046468" target="_blank" rel="noopener" class="sl">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043H5.986c-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98C23.986 15.668 24 15.259 24 12c0-3.259-.014-3.667-.072-4.947z"/></svg>
+          <a href="https://music.apple.com/us/artist/vennisay/1476883119" target="_blank" rel="noopener" class="sl">
+            <svg viewBox="0 0 361 361" width="22" height="22" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M254.5,55c-0.87,0.08-8.6,1.45-9.53,1.64l-107,21.59l-0.04,0.01c-2.79,0.59-4.98,1.58-6.67,3c-2.04,1.71-3.17,4.13-3.6,6.95c-0.09,0.6-0.24,1.82-0.24,3.62c0,0,0,109.32,0,133.92c0,3.13-0.25,6.17-2.37,8.76c-2.12,2.59-4.74,3.37-7.81,3.99c-2.33,0.47-4.66,0.94-6.99,1.41c-8.84,1.78-14.59,2.99-19.8,5.01c-4.98,1.93-8.71,4.39-11.68,7.51c-5.89,6.17-8.28,14.54-7.46,22.38c0.7,6.69,3.71,13.09,8.88,17.82c3.49,3.2,7.85,5.63,12.99,6.66c5.33,1.07,11.01,0.7,19.31-0.98c4.42-0.89,8.56-2.28,12.5-4.61c3.9-2.3,7.24-5.37,9.85-9.11c2.62-3.75,4.31-7.92,5.24-12.35c0.96-4.57,1.19-8.7,1.19-13.26l0-116.15c0-6.22,1.76-7.86,6.78-9.08c0,0,88.94-17.94,93.09-18.75c5.79-1.11,8.52,0.54,8.52,6.61l0,79.29c0,3.14-0.03,6.32-2.17,8.92c-2.12,2.59-4.74,3.37-7.81,3.99c-2.33,0.47-4.66,0.94-6.99,1.41c-8.84,1.78-14.59,2.99-19.8,5.01c-4.98,1.93-8.71,4.39-11.68,7.51c-5.89,6.17-8.49,14.54-7.67,22.38c0.7,6.69,3.92,13.09,9.09,17.82c3.49,3.2,7.85,5.56,12.99,6.6c5.33,1.07,11.01,0.69,19.31-0.98c4.42-0.89,8.56-2.22,12.5-4.55c3.9-2.3,7.24-5.37,9.85-9.11c2.62-3.75,4.31-7.92,5.24-12.35c0.96-4.57,1-8.7,1-13.26V64.46C263.54,58.3,260.29,54.5,254.5,55z"/></svg>
             Apple Music
           </a>
           <a href="https://www.youtube.com/@vennisay" target="_blank" rel="noopener" class="sl">
@@ -524,9 +525,9 @@
       <div class="vid-scroll">
         <div class="vid-card rv-scale">
           <a href="https://www.youtube.com/@vennisay" target="_blank" rel="noopener" class="vid-link">
-            <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#1a0010,#2a0820);display:flex;align-items:center;justify-content:center;color:rgba(244,114,168,.25);font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;">isolation</div>
+            <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#1a0010,#2a0820);display:flex;align-items:center;justify-content:center;color:rgba(244,114,168,.25);font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;">vulnerable</div>
             <div class="vid-play"><svg viewBox="0 0 68 48" width="68" height="48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="rgba(255,255,255,0.9)"/><path d="M45 24L27 14v20" fill="#0d0508"/></svg></div>
-            <span class="vid-ttl">isolation</span>
+            <span class="vid-ttl">vulnerable</span>
           </a>
         </div>
         <div class="vid-card rv-scale" style="--d:.15s">
@@ -555,15 +556,15 @@
         <div>
           <h2 class="sec-lbl rv-up" data-n="04.">About</h2>
           <h3 class="ah rv-up"><em>Faith.<br>Music.<br>Purpose.</em></h3>
-          <p class="ab rv-up">Vennisay is a Christian artist from Lakeland, Florida with a deep-rooted passion for music and an unwavering faith in God. Creating soul-stirring music that resonates across genres, he's on a mission to prove that faith-based music can be both relevant and engaging.</p>
-          <p class="ab rv-up">Formerly in the secular music scene, Vennisay made a transformative journey to redirect his focus toward spreading the message of God's love through his art — connecting with youth on a profound level.</p>
+          <p class="ab rv-up">Vennisay is a Christian artist from Lakeland, Florida with a deep-rooted passion for music and an unwavering faith in God. His movement is simple: <em style="color:var(--pink2);font-style:normal;font-weight:600;">REAL ART</em> music that's honest, intentional, and rooted in something bigger than the moment.</p>
+          <p class="ab rv-up">Formerly in the secular music scene, Vennisay made a transformative journey to redirect his focus toward spreading the message of God's love. REAL ART isn't just a label. It's the standard. Every track he drops is built to last, connect, and mean something.</p>
           <div class="origin rv-up"><span style="font-size:1.4rem">📍</span> Lakeland, FL · Independent · Christian Artist</div>
         </div>
         <div class="about-vis rv-right">
           <div class="qblock">
             <span class="qmark">"</span>
-            <p class="qtext">Determined to break stereotypes and overcome misconceptions about Christian music — proving that faith-based music can be both relevant and engaging.</p>
-            <span class="qattr">— Vennisay</span>
+            <p class="qtext">REAL ART. Not just a label. A standard. Music that's honest, God-centered, and built to outlast the trend cycle.</p>
+            <span class="qattr">Vennisay</span>
           </div>
         </div>
       </div>
@@ -594,8 +595,8 @@
           <a href="https://www.youtube.com/@vennisay" target="_blank" rel="noopener" aria-label="YouTube">
             <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
           </a>
-          <a href="https://music.apple.com/us/artist/vennisay/1573046468" target="_blank" rel="noopener" aria-label="Apple Music">
-            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043H5.986c-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98C23.986 15.668 24 15.259 24 12c0-3.259-.014-3.667-.072-4.947z"/></svg>
+          <a href="https://music.apple.com/us/artist/vennisay/1476883119" target="_blank" rel="noopener" aria-label="Apple Music">
+            <svg viewBox="0 0 361 361" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M254.5,55c-0.87,0.08-8.6,1.45-9.53,1.64l-107,21.59l-0.04,0.01c-2.79,0.59-4.98,1.58-6.67,3c-2.04,1.71-3.17,4.13-3.6,6.95c-0.09,0.6-0.24,1.82-0.24,3.62c0,0,0,109.32,0,133.92c0,3.13-0.25,6.17-2.37,8.76c-2.12,2.59-4.74,3.37-7.81,3.99c-2.33,0.47-4.66,0.94-6.99,1.41c-8.84,1.78-14.59,2.99-19.8,5.01c-4.98,1.93-8.71,4.39-11.68,7.51c-5.89,6.17-8.28,14.54-7.46,22.38c0.7,6.69,3.71,13.09,8.88,17.82c3.49,3.2,7.85,5.63,12.99,6.66c5.33,1.07,11.01,0.7,19.31-0.98c4.42-0.89,8.56-2.28,12.5-4.61c3.9-2.3,7.24-5.37,9.85-9.11c2.62-3.75,4.31-7.92,5.24-12.35c0.96-4.57,1.19-8.7,1.19-13.26l0-116.15c0-6.22,1.76-7.86,6.78-9.08c0,0,88.94-17.94,93.09-18.75c5.79-1.11,8.52,0.54,8.52,6.61l0,79.29c0,3.14-0.03,6.32-2.17,8.92c-2.12,2.59-4.74,3.37-7.81,3.99c-2.33,0.47-4.66,0.94-6.99,1.41c-8.84,1.78-14.59,2.99-19.8,5.01c-4.98,1.93-8.71,4.39-11.68,7.51c-5.89,6.17-8.49,14.54-7.67,22.38c0.7,6.69,3.92,13.09,9.09,17.82c3.49,3.2,7.85,5.56,12.99,6.6c5.33,1.07,11.01,0.69,19.31-0.98c4.42-0.89,8.56-2.22,12.5-4.55c3.9-2.3,7.24-5.37,9.85-9.11c2.62-3.75,4.31-7.92,5.24-12.35c0.96-4.57,1-8.7,1-13.26V64.46C263.54,58.3,260.29,54.5,254.5,55z"/></svg>
           </a>
         </div>
         <div class="fi">© 2026 Vennisay · All Rights Reserved</div>
