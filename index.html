@@ -165,10 +165,12 @@
       .album-new-tag { font-family:var(--mono); font-size:.68rem; letter-spacing:.25em; text-transform:uppercase; color:var(--pink2); margin-bottom:16px; display:flex; align-items:center; gap:10px; }
       .album-new-dot { width:6px; height:6px; border-radius:50%; background:var(--pink2); animation:pd 1.5s ease-in-out infinite; }
       .album-title-big {
-        font-size:clamp(2rem,5vw,4.2rem); font-weight:900; line-height:1;
+        font-size:clamp(1.6rem,3.5vw,3rem); font-weight:900; line-height:1;
         letter-spacing:-.01em; text-transform:uppercase; margin-bottom:12px;
+        white-space:nowrap;
         background:linear-gradient(100deg,#fff 0%,#ffd6e8 40%,var(--pink2) 70%,var(--pink) 100%);
         -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        color:var(--pink2);
       }
       .album-meta { font-family:var(--mono); font-size:.75rem; letter-spacing:.12em; color:var(--text-dim); text-transform:uppercase; margin-bottom:32px; }
       .album-meta span { color:var(--pink3); }
@@ -277,8 +279,17 @@
       @media (max-width:767px) {
         body { cursor:auto; }
         .cursor-dot,.cursor-ring { display:none; }
-        .nav-links { gap:14px; }
-        .nav-links a { font-size:.7rem; }
+
+        /* Nav — shrink wordmark and links to fit on one line */
+        .nav { padding:0 16px; }
+        .nav-wm { font-size:.75rem; letter-spacing:.08em; }
+        .nav-links { gap:10px; }
+        .nav-links a { font-size:.62rem; letter-spacing:.04em; }
+
+        /* Hero — swap to mobile image if available */
+        .hero-port .desktop-img { display:none; }
+        .hero-port .mobile-img  { display:block; }
+
         .hero-title { font-size:clamp(2.8rem,12vw,6rem); white-space:normal; }
         .album-top { grid-template-columns:1fr; }
         .album-cover-wrap { max-width:280px; margin:0 auto; }
@@ -289,6 +300,12 @@
         .about-vis { display:none; }
         .dsp-grid { grid-template-columns:1fr; }
         .footer-inner { flex-direction:column; align-items:flex-start; gap:14px; }
+      }
+
+      /* On desktop, hide the mobile image */
+      @media (min-width:768px) {
+        .hero-port .mobile-img { display:none; }
+        .hero-port .desktop-img { display:block; }
       }
     </style>
   </head>
@@ -327,7 +344,8 @@
         <div class="blob b4"></div>
       </div>
       <div class="hero-port" id="heroPort">
-        <img src="hero.jpg" alt="Vennisay" decoding="async" fetchpriority="high" onerror="this.style.display='none'" />
+        <img src="hero.jpg" alt="Vennisay" class="desktop-img" decoding="async" fetchpriority="high" onerror="this.style.display='none'" />
+        <img src="hero-mobile.jpg" alt="Vennisay" class="mobile-img" decoding="async" fetchpriority="high" onerror="this.style.display='none'" />
       </div>
       <div class="hero-grain"></div>
       <div class="hero-aurora"></div>
@@ -337,7 +355,6 @@
         <div class="badge"><div class="pulse"></div>GOD MADE ART — 16 Tracks — Out Now</div>
         <p class="hero-pre rv-up">Lakeland, FL · Christian Artist</p>
         <h1 class="hero-title">VENNISAY</h1>
-        <p class="hero-tag rv-up">Faith · Music · Purpose — New Album Out Now</p>
         <div class="hero-cta rv-up">
           <a href="#album" class="btn btn-pink">Hear the Album</a>
           <a href="https://open.spotify.com/artist/47fuPz0K0cyruPcpXiBo2W" target="_blank" rel="noopener" class="btn btn-ghost">Listen on Spotify</a>
@@ -374,7 +391,7 @@
           <!-- Info -->
           <div class="album-info rv-right">
             <div class="album-new-tag"><div class="album-new-dot"></div>New Album — Out Now</div>
-            <h2 class="album-title-big">God<br>Made<br>Art</h2>
+            <h2 class="album-title-big">GOD MADE ART</h2>
             <p class="album-meta"><span>16 Tracks</span> &nbsp;·&nbsp; May 22, 2026 &nbsp;·&nbsp; 43 min</p>
             <div class="album-cta">
               <a href="https://open.spotify.com/album/3I0phqb3Ld6h9l1B7K5zyc" target="_blank" rel="noopener" class="btn btn-pink">
