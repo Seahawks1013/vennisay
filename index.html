@@ -8,7 +8,7 @@
     <meta property="og:title" content="Vennisay — GOD MADE ART Out Now" />
     <meta property="og:description" content="Christian artist from Lakeland, FL. Soul-stirring music across genres." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://i.scdn.co/image/ab67616d0000b273c07514f8748dc0d54f1ea7e3" />
+    <meta property="og:image" content="https://i.scdn.co/image/ab67616d0000b27386803efbdeb06729e342ce2d" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Vennisay — GOD MADE ART Out Now" />
 
@@ -59,7 +59,7 @@
       .cursor-ring.hover { width:48px; height:48px; border-color:var(--pink2); }
 
       /* ── SCROLL BAR ─── */
-      .scroll-bar { position:fixed; top:0; left:0; height:2px; width:0%; background:linear-gradient(90deg,var(--pink),var(--pink3)); z-index:9000; transition:width .1s linear; }
+      .scroll-bar { position:fixed; top:0; left:0; height:3px; width:0%; background:linear-gradient(90deg,var(--pink),var(--pink2),var(--pink3)); z-index:9000; transition:width .08s linear; border-radius:0 2px 2px 0; box-shadow: 0 0 8px rgba(232,64,122,.6); }
 
       /* ── NAV ─── */
       .nav { position:fixed; top:0; left:0; right:0; height:var(--nav-h); z-index:800; display:flex; align-items:center; justify-content:space-between; padding:0 clamp(20px,4vw,60px); transition:background .4s,backdrop-filter .4s; }
@@ -280,19 +280,33 @@
         body { cursor:auto; }
         .cursor-dot,.cursor-ring { display:none; }
 
-        /* Nav — shrink wordmark and links to fit on one line */
-        .nav { padding:0 16px; }
-        .nav-wm { font-size:.75rem; letter-spacing:.08em; }
-        .nav-links { gap:10px; }
-        .nav-links a { font-size:.62rem; letter-spacing:.04em; }
+        /* Nav — only show wordmark + 2 key links on mobile */
+        .nav { padding:0 20px; }
+        .nav-wm { font-size:.8rem; letter-spacing:.08em; }
+        .nav-links { gap:16px; }
+        .nav-links a { font-size:.72rem; letter-spacing:.04em; }
+        .nav-links a.hide-mobile { display:none; }
+
+        /* Hero — center everything */
+        .hero { align-items:center; justify-content:center; text-align:center; padding-bottom:clamp(80px,12vw,120px); }
+        .hero-cnt { display:flex; flex-direction:column; align-items:center; }
+        .hero-cta { justify-content:center; }
+        .badge { justify-content:center; }
 
         /* Hero — swap to mobile image if available */
         .hero-port .desktop-img { display:none; }
         .hero-port .mobile-img  { display:block; }
 
         .hero-title { font-size:clamp(2.8rem,12vw,6rem); white-space:normal; }
-        .album-top { grid-template-columns:1fr; }
+
+        /* Album section — center */
+        .album-top { grid-template-columns:1fr; text-align:center; }
+        .album-info { display:flex; flex-direction:column; align-items:center; }
+        .album-new-tag { justify-content:center; }
+        .album-cta { justify-content:center; }
         .album-cover-wrap { max-width:280px; margin:0 auto; }
+        .tracklist-label { text-align:center; }
+
         .tracks { grid-template-columns:1fr; }
         .song-grid { grid-template-columns:1fr; }
         .song-artwork { max-width:300px; margin:0 auto; }
@@ -302,7 +316,6 @@
         .footer-inner { flex-direction:column; align-items:flex-start; gap:14px; }
       }
 
-      /* On desktop, hide the mobile image */
       @media (min-width:768px) {
         .hero-port .mobile-img { display:none; }
         .hero-port .desktop-img { display:block; }
@@ -328,9 +341,9 @@
       <a href="#hero" class="nav-wm">Vennisay</a>
       <div class="nav-links">
         <a href="#album" class="hot">New Album</a>
-        <a href="#song">Song</a>
-        <a href="#music">Music</a>
-        <a href="#videos">Videos</a>
+        <a href="#song" class="hide-mobile">Song</a>
+        <a href="#music" class="hide-mobile">Music</a>
+        <a href="#videos" class="hide-mobile">Videos</a>
         <a href="#about">About</a>
       </div>
     </nav>
